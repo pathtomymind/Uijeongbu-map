@@ -62,7 +62,7 @@
 • 주소: [Address에서 괄호 안 내용]
 • 민원내용: [Complaint 값]
 • 현장사진요약: [PhotoSummary 값]
-- 좌표 표시: "출발지:현위치 → 목적지: (위도 XX.XXXX),(경도 XXX.XXXX)" (폰트 크기 10px, Courier New)
+- 좌표 표시: "출발지:현위치 → 목적지: 위도 XX.XXXX / 경도XXX.XXXX" (폰트 크기 10px, Courier New)
 - 티맵 버튼: "티맵으로 길찾기" (보라색 그라데이션 배경)
 6. 티맵 URL 스킴:
 `tmap://route?goalname=${destination}&goaly=${lat}&goalx=${lng}`
