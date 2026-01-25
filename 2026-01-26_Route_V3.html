@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-01-25_Route_V3</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+        }
+        .header h1 { font-size: 24px; margin-bottom: 5px; }
+        .header p { font-size: 11px; opacity: 0.8; }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card.start { background: linear-gradient(to right, #2ecc71, #27ae60); color: white; }
+        .card.end { background: linear-gradient(to right, #ff9966, #ff5e62); color: white; }
+        .badge {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .badge-start { background-color: #fff; color: #2ecc71; }
+        .badge-mid { background-color: #3498db; }
+        .badge-end { background-color: #fff; color: #ff9966; }
+        .info-box {
+            background: #f1f3f5;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+        }
+        .card.start .info-box, .card.end .info-box { background: rgba(255,255,255,0.2); color: white; }
+        .guide {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #764ba2;
+            font-weight: bold;
+        }
+        .card.start .guide, .card.end .guide { color: white; }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn-tmap { background: linear-gradient(to right, #667eea, #764ba2); }
+        .btn-naver { background: linear-gradient(to right, #00c73c, #00bf18); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+    <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+</div>
+
+<div class="summary-box">
+    오늘의 점검 경로 요약: 의정부시청 출발 → 총 9개 지점 → 의정부시청 복귀
+</div>
+
+<div class="card start">
+    <span class="badge badge-start">1</span>
+    <strong style="font-size: 18px;">의정부시청 (출발)</strong>
+    <div class="info-box">주소: 경기도 의정부시 시민로 1</div>
+    <div class="guide">🚩 업무 시작: 시청에서 비우로 방면으로 북상하세요.</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0333" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7381&dlng=127.0333&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">2</span>
+    <strong style="font-size: 16px;">가금교 삼거리 (녹양동 산1-4)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 1<br>
+        <b>주소:</b> 녹양동 산1-4<br>
+        <b>민원내용:</b> 분양 현수막 정비 (담당: 이여은)<br>
+        <b>현장사진요약:</b> 가로수 사이 전신주에 부착된 현수막
+    </div>
+    <div class="guide">➡️ 이동 가이드: 호국로 방면으로 남하하여 가능동 진입</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=가금교삼거리&goaly=37.7612&goalx=127.0321" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7612&dlng=127.0321&dname=가금교삼거리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">3</span>
+    <strong style="font-size: 16px;">백정밥상 앞 (가능동 663-9)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 2<br>
+        <b>주소:</b> 가능동 663-9<br>
+        <b>민원내용:</b> 푸르넷 광고 벽보 정비 (담당: 이여은)<br>
