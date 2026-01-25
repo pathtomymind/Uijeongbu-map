@@ -1,79 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>2026-01-25 Full Route V1</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="2026-01-25 의정부 정비 전체 경로 V2">
+    <meta property="og:description" content="전라도 전주 아님! 의정부 관내 최적화 루프 경로 지도입니다.">
+    <meta property="og:type" content="website">
+    <title>2026-01-25 Full Route V2</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
     <style>
-        body { margin: 0; padding: 0; }
+        body { margin: 0; padding: 0; font-family: 'Apple SD Gothic Neo', sans-serif; }
         #map { height: 100vh; width: 100vw; }
-        .info-panel {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            font-size: 12px;
+        .legend {
+            position: absolute; top: 10px; right: 10px; z-index: 1000;
+            background: white; padding: 12px; border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); font-size: 13px;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <div class="info-panel">
-        <strong>오늘의 순찰 경로</strong><br>
-        <span style="color: blue;">●</span> 순회 구간 (파랑)<br>
-        <span style="color: red;">●</span> 복귀 구간 (빨강)
+    <div class="legend">
+        <strong>🚩 오늘 순찰 동선</strong><br>
+        <hr>
+        <span style="color: blue;">━</span> 순회 (파랑)<br>
+        <span style="color: red;">━</span> 시청 복귀 (빨강)
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
 
     <script>
-        var map = L.map('map').setView([37.7381, 127.0333], 13);
+        var map = L.map('map').setView([37.745, 127.065], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // 좌표 데이터 정의
+        // 의정부 관내 정밀 좌표 데이터 (전주 시티 제외!)
         const points = [
-            { name: "의정부시청 (출발)", lat: 37.7381, lng: 127.0333 },
-            { name: "가금교 삼거리", lat: 37.7612, lng: 127.0321 },
-            { name: "백정밥상 앞", lat: 35.7518, lng: 127.0365 },
-            { name: "가능SK점 세븐일레븐", lat: 37.7505, lng: 127.0388 },
-            { name: "화순식당 (태평로)", lat: 37.7455, lng: 127.0512 },
-            { name: "민락동 910", lat: 37.7488, lng: 127.0955 },
-            { name: "산곡동 810 삼거리", lat: 37.7215, lng: 127.0922 },
-            { name: "의정부시청 (복귀)", lat: 37.7381, lng: 127.0333 }
+            { name: "의정부시청 (출발)", lat: 37.7381, lng: 127.0333 }, // 기점
+            { name: "가금교 삼거리", lat: 37.7612, lng: 127.0321 }, // 1번
+            { name: "백정밥상 앞", lat: 37.7518, lng: 127.0365 }, // 2번
+            { name: "세븐일레븐 가능SK점 (통합)", lat: 37.7505, lng: 127.0388 }, // 3,4,5번 통합
+            { name: "동진종합상사", lat: 37.7492, lng: 127.0435 }, // 6번
+            { name: "화순식당 (태평로)", lat: 37.7455, lng: 127.0512 }, // 12번
+            { name: "민락동 910", lat: 37.7488, lng: 127.0955 }, // 11번
+            { name: "고산동 874", lat: 37.7395, lng: 127.1065 }, // 10번
+            { name: "산곡동 730 CU", lat: 37.7302, lng: 127.1041 }, // 7번
+            { name: "산곡동 810 삼거리 (통합)", lat: 37.7215, lng: 127.0922 }, // 8,9번 통합
+            { name: "의정부시청 (복귀)", lat: 37.7381, lng: 127.0333 } // 종점
         ];
 
-        // 1. 순회 구간 (파란색 선: 1번 지점 ~ 마지막 지점)
+        // 1. 순회 경로 (파란색: 출발지 ~ 10번째 지점)
         L.Routing.control({
-            waypoints: points.slice(0, 7).map(p => L.latLng(p.lat, p.lng)),
+            waypoints: points.slice(0, 10).map(p => L.latLng(p.lat, p.lng)),
             lineOptions: { styles: [{ color: 'blue', weight: 6, opacity: 0.7 }] },
             createMarker: function(i, wp) {
                 return L.marker(wp.latLng).bindPopup(points[i].name);
             },
-            routeWhileDragging: false,
-            addWaypoints: false
+            addWaypoints: false,
+            routeWhileDragging: false
         }).addTo(map);
 
-        // 2. 복귀 구간 (빨간색 선: 마지막 지점 ~ 의정부시청)
+        // 2. 복귀 경로 (빨간색: 10번째 지점 ~ 시청)
         L.Routing.control({
             waypoints: [
-                L.latLng(points[6].lat, points[6].lng),
-                L.latLng(points[7].lat, points[7].lng)
+                L.latLng(points[9].lat, points[9].lng),
+                L.latLng(points[10].lat, points[10].lng)
             ],
             lineOptions: { styles: [{ color: 'red', weight: 6, opacity: 0.9, dashArray: '10, 10' }] },
-            createMarker: function() { return null; }, // 마커 중복 방지
+            createMarker: function() { return null; },
             addWaypoints: false
         }).addTo(map);
-
     </script>
 </body>
 </html>
