@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-01-25 불법옥외광고물정비 최적화 순회 경로 V1</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+        }
+        .header h2 { font-size: 22px; margin-bottom: 5px; }
+        .header p { font-size: 11px; opacity: 0.9; margin: 0; }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 12px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card.start-end {
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: white;
+        }
+        .badge {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            color: white;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        .badge-start { background-color: #2ecc71; }
+        .badge-mid { background-color: #3498db; }
+        .badge-end { background-color: #e67e22; }
+        .info-box {
+            background: #f1f3f5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .card.start-end .info-box { background: rgba(255,255,255,0.2); color: white; }
+        .coords {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            margin-top: 10px;
+            color: #666;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn-tmap { background: linear-gradient(to right, #667eea, #764ba2); }
+        .btn-naver { background: linear-gradient(to right, #00c73c, #00bf18); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>불법옥외광고물 정비 최적화 경로 안내</h2>
+    <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+</div>
+
+<div class="summary-box">
+    오늘의 점검 경로 요약: 의정부시청 출발 → 총 7개 지점 → 의정부시청 복귀
+</div>
+
+<div class="card start-end">
+    <span class="badge badge-start">1</span>
+    <strong style="font-size: 17px;">의정부시청 (출발)</strong>
+    <div class="info-box">
+        주소: 경기도 의정부시 시민로 1
+    </div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0333" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7381&dlng=127.0333&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card start-end">
+    <span class="badge badge-end">9</span>
+    <strong style="font-size: 17px;">의정부시청 (복귀)</strong>
+    <div class="info-box">
+        주소: 경기도 의정부시 시민로 1
+    </div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0333" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7381&dlng=127.0333&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+</body>
+</html>
