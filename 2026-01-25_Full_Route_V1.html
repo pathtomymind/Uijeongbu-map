@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>불법옥외광고물 정비 전체 경로 시각화</title>
+    <title>의정부 불법광고물 정비 전체 경로 지도</title>
     
-    <meta property="og:title" content="불법옥외광고물 정비 전체 경로 시각화">
-    <meta property="og:description" content="2026-01-25 최적화 순찰 경로 안내 (의정부시청 기점)">
+    <meta property="og:title" content="불법광고물 정비 최적화 지도">
+    <meta property="og:description" content="의정부시청 기점 루프형 순회 경로 (제미나이 설계)">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
 
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
-        #map {
-            height: 100vh;
-            width: 100vw;
-        }
-        /* Hide summary panels and instruction boxes */
-        .leaflet-routing-container {
-            display: none !important;
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+        #map { height: 100vh; width: 100vw; }
+        
+        /* 경로 요약 박스 제거 */
+        .leaflet-routing-container { display: none !important; }
+        
+        /* 툴팁 스타일링 */
+        .custom-tooltip {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #764ba2;
+            border-radius: 5px;
+            padding: 5px 8px;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -34,79 +37,71 @@
 
 <div id="map"></div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
 <script>
-    // 1. Initialize Map
-    const map = L.map('map').setView([37.7381, 127.0333], 13);
+    // 1. 지도 초기화 (의정부 시청 중심)
+    var map = L.map('map').setView([37.7381, 127.0337], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // 2. Define Data Points (Coordinates and Info)
-    const points = [
-        { name: "의정부시청", addr: "경기도 의정부시 시민로 1", lat: 37.7380, lng: 127.0337, type: 'start' },
-        { name: "동진종합상사", addr: "가능동 205-1", lat: 37.7515, lng: 127.0435 },
-        { name: "백정밥상 앞", addr: "가능동 663-9", lat: 37.7533, lng: 127.0325 },
-        { name: "세븐일레븐 가능SK점", addr: "가능동 663-21", lat: 37.7541, lng: 127.0320 },
-        { name: "가금교 삼거리", addr: "녹양동 산1-4", lat: 37.7635, lng: 127.0332 },
-        { name: "화순식당", addr: "태평로 132", lat: 37.7467, lng: 127.0495 },
-        { name: "민락동 버스정류장", addr: "민락동 910", lat: 37.7455, lng: 127.1010 },
-        { name: "고산휴스토리 정문", addr: "고산동 874", lat: 37.7290, lng: 127.1085 },
-        { name: "산곡동 삼거리", addr: "산곡동 810", lat: 37.7087, lng: 127.1051, type: 'last' }
+    // 2. 좌표 데이터 설정
+    var locations = [
+        { name: "출발: 의정부시청", addr: "시민로 1", lat: 37.7381, lng: 127.0337, color: "green" },
+        { name: "가금교 삼거리", addr: "녹양동 산1-4", lat: 37.7584, lng: 127.0321, color: "blue" },
+        { name: "백정밥상 앞/사거리", addr: "가능동 663-9", lat: 37.7512, lng: 127.0345, color: "blue" },
+        { name: "화순식당", addr: "태평로 132", lat: 37.7445, lng: 127.0498, color: "blue" },
+        { name: "민락로 279 앞", addr: "민락동 910", lat: 37.7485, lng: 127.0982, color: "blue" },
+        { name: "휴스토리 정문", addr: "고산동 874", lat: 37.7289, lng: 127.1085, color: "blue" },
+        { name: "산곡동 삼거리", addr: "산곡동 810", lat: 37.7215, lng: 127.1105, color: "blue" },
+        { name: "복귀: 의정부시청", addr: "시민로 1", lat: 37.7381, lng: 127.0337, color: "orange" }
     ];
 
-    const homePoint = points[0]; // Return to Start
-    const lastPoint = points[points.length - 1];
-
-    // 3. Add Markers with Permanent Tooltips
-    points.forEach((p, index) => {
-        const markerColor = p.type === 'start' ? 'green' : (p.type === 'last' ? 'orange' : 'blue');
-        const marker = L.circleMarker([p.lat, p.lng], {
+    // 3. 마커 및 상시 툴팁 추가
+    locations.forEach(function(loc) {
+        var marker = L.circleMarker([loc.lat, loc.lng], {
             radius: 8,
-            fillColor: markerColor,
+            fillColor: loc.color,
             color: "#fff",
             weight: 2,
             opacity: 1,
             fillOpacity: 0.8
         }).addTo(map);
 
-        marker.bindTooltip(`<b>${index + 1}. ${p.name}</b><br>${p.addr}`, {
+        marker.bindTooltip(`<strong>${loc.name}</strong><br>${loc.addr}`, {
             permanent: true,
             direction: 'right',
-            className: 'custom-tooltip'
+            className: 'custom-tooltip',
+            offset: [10, 0]
         });
     });
 
-    // 4. Routing: Main Work Path (P1 to P9) - Blue Solid Line
-    const workWaypoints = points.map(p => L.latLng(p.lat, p.lng));
+    // 4. 경로 표시 (Leaflet Routing Machine)
     
+    // [정비 이동 경로] 시청 -> 마지막 지점 (파란색 실선)
+    var patrolWaypoints = locations.slice(0, 7).map(loc => L.latLng(loc.lat, loc.lng));
     L.Routing.control({
-        waypoints: workWaypoints,
-        lineOptions: {
-            styles: [{ color: '#007bff', opacity: 0.8, weight: 6 }]
-        },
-        createMarker: function() { return null; }, // Marker handled above
+        waypoints: patrolWaypoints,
+        lineOptions: { styles: [{ color: '#007bff', opacity: 0.8, weight: 6 }] },
+        createMarker: function() { return null; }, // 마커 중복 방지
         addWaypoints: false,
-        routeWhileDragging: false,
-        show: false
+        routeWhileDragging: false
     }).addTo(map);
 
-    // 5. Routing: Return Path (P9 to P1) - Red Dotted Line
+    // [복귀 경로] 마지막 지점 -> 시청 (빨간색 점선 스타일)
+    var returnWaypoints = [
+        L.latLng(locations[6].lat, locations[6].lng),
+        L.latLng(locations[7].lat, locations[7].lng)
+    ];
     L.Routing.control({
-        waypoints: [
-            L.latLng(lastPoint.lat, lastPoint.lng),
-            L.latLng(homePoint.lat, homePoint.lng)
-        ],
-        lineOptions: {
-            styles: [{ color: '#ff4d4d', opacity: 0.7, weight: 6, dashArray: '10, 10' }]
+        waypoints: returnWaypoints,
+        lineOptions: { 
+            styles: [
+                { color: '#ff0000', opacity: 0.6, weight: 6, dashArray: '10, 10' }
+            ] 
         },
         createMarker: function() { return null; },
-        addWaypoints: false,
-        routeWhileDragging: false,
-        show: false
+        addWaypoints: false
     }).addTo(map);
 
 </script>
