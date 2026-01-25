@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2026-01-25 Full Route V1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { height: 100vh; width: 100vw; }
+        .info-panel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="info-panel">
+        <strong>오늘의 순찰 경로</strong><br>
+        <span style="color: blue;">●</span> 순회 구간 (파랑)<br>
+        <span style="color: red;">●</span> 복귀 구간 (빨강)
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <script>
+        var map = L.map('map').setView([37.7381, 127.0333], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 좌표 데이터 정의
+        const points = [
+            { name: "의정부시청 (출발)", lat: 37.7381, lng: 127.0333 },
+            { name: "가금교 삼거리", lat: 37.7612, lng: 127.0321 },
+            { name: "백정밥상 앞", lat: 35.7518, lng: 127.0365 },
+            { name: "가능SK점 세븐일레븐", lat: 37.7505, lng: 127.0388 },
+            { name: "화순식당 (태평로)", lat: 37.7455, lng: 127.0512 },
+            { name: "민락동 910", lat: 37.7488, lng: 127.0955 },
+            { name: "산곡동 810 삼거리", lat: 37.7215, lng: 127.0922 },
+            { name: "의정부시청 (복귀)", lat: 37.7381, lng: 127.0333 }
+        ];
+
+        // 1. 순회 구간 (파란색 선: 1번 지점 ~ 마지막 지점)
+        L.Routing.control({
+            waypoints: points.slice(0, 7).map(p => L.latLng(p.lat, p.lng)),
+            lineOptions: { styles: [{ color: 'blue', weight: 6, opacity: 0.7 }] },
+            createMarker: function(i, wp) {
+                return L.marker(wp.latLng).bindPopup(points[i].name);
+            },
+            routeWhileDragging: false,
+            addWaypoints: false
+        }).addTo(map);
+
+        // 2. 복귀 구간 (빨간색 선: 마지막 지점 ~ 의정부시청)
+        L.Routing.control({
+            waypoints: [
+                L.latLng(points[6].lat, points[6].lng),
+                L.latLng(points[7].lat, points[7].lng)
+            ],
+            lineOptions: { styles: [{ color: 'red', weight: 6, opacity: 0.9, dashArray: '10, 10' }] },
+            createMarker: function() { return null; }, // 마커 중복 방지
+            addWaypoints: false
+        }).addTo(map);
+
+    </script>
+</body>
+</html>
