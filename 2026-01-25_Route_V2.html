@@ -3,105 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-01-25 음성 안내 포함 최적화 경로 (V2)</title>
+    <title>2026-01-25 TTS 완벽 구동 버전</title>
     <style>
-        /* 기존 스타일 가이드 준수 */
-        body {
-            margin: 0; padding: 20px;
-            font-family: 'Pretendard', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex; flex-direction: column; align-items: center;
-        }
+        body { margin: 0; padding: 20px; font-family: 'Pretendard', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; flex-direction: column; align-items: center; }
         .container { width: 100%; max-width: 800px; }
-        header { text-align: center; color: white; margin-bottom: 25px; }
-        header p { font-size: 0.8rem; opacity: 0.9; }
-
-        .summary-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px; border-radius: 15px; margin-bottom: 20px;
-            text-align: center; font-weight: bold; font-size: 0.9rem;
-        }
-
-        .card {
-            background: white; border-radius: 20px; padding: 20px;
-            margin-bottom: 20px; shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        /* 시작(녹색), 종료(주황), 중간(파랑) 색상 적용 */
-        .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
-        .card.end { background: linear-gradient(to right, #f2994a, #f2c94c); color: white; }
-        
-        .badge {
-            display: inline-block; width: 28px; height: 28px; border-radius: 50%;
-            background: #4A90E2; color: white; text-align: center; line-height: 28px;
-            font-weight: bold; margin-right: 10px;
-        }
-        .start .badge, .end .badge { background: white; color: #333; }
-
-        .info-box {
-            background: #f8f9fa; border-radius: 12px; padding: 15px;
-            font-size: 0.9rem; color: #444; margin-top: 10px;
-        }
-        .start .info-box, .end .info-box { background: rgba(255,255,255,0.2); color: white; }
-
-        .guide { font-size: 0.75rem; color: #666; margin-top: 12px; }
-        .start .guide, .end .guide { color: white; opacity: 0.9; }
-
-        /* 버튼 그룹 구성: TTS(추가), 티맵, 네이버 */
+        .card { background: white; border-radius: 20px; padding: 20px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .title { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; }
+        .badge { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: #4A90E2; color: white; text-align: center; line-height: 28px; margin-right: 10px; }
+        .info-box { background: #f8f9fa; border-radius: 12px; padding: 15px; font-size: 0.9rem; color: #444; }
+        .guide { font-size: 0.75rem; color: #666; margin-top: 12px; border-left: 3px solid #ddd; padding-left: 10px; }
         .btn-group { display: flex; gap: 8px; margin-top: 15px; }
-        .btn {
-            flex: 1; padding: 12px; border-radius: 10px;
-            text-align: center; text-decoration: none; color: white;
-            font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer;
-        }
-        .btn-tts { background: linear-gradient(45deg, #2193b0, #6dd5ed); } /* 하늘색 TTS 버튼 */
-        .btn-tmap { background: linear-gradient(45deg, #8e2de2, #4a00e0); } /* 보라색 티맵 */
-        .btn-naver { background: linear-gradient(45deg, #00c73c, #00bf20); } /* 연두색 네이버 */
+        .btn { flex: 1; padding: 12px; border-radius: 10px; text-align: center; border: none; color: white; font-weight: bold; font-size: 0.85rem; cursor: pointer; }
+        .btn-tts { background: linear-gradient(45deg, #2193b0, #6dd5ed); }
+        .btn-tmap { background: linear-gradient(45deg, #8e2de2, #4a00e0); }
+        .btn-naver { background: linear-gradient(45deg, #00c73c, #00bf20); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
-        <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
-    </header>
-
-    <div class="summary-box">
-        오늘의 점검 경로 요약: 의정부시청 출발 → 총 9개 지점 → 의정부시청 복귀
-    </div>
-
     <div class="card">
-        <div class="title"><span class="badge">2</span> <span id="title-2">태평로 132 (화순식당)</span></div>
+        <div class="title"><span class="badge">10</span> <span id="t-10">가능동 663-21 (세븐일레븐 및 SK아파트 후문)</span></div>
         <div class="info-box">
-            <div><b>원래순번:</b> 12</div>
-            <div><b>민원내용:</b> 광고 현수막 (에어라이트)</div>
+            <div><b>원래순번:</b> 3, 4, 5</div>
+            <div><b>민원내용:</b> 광고 벽보</div>
         </div>
-        <div class="guide" id="guide-2">시청에서 시민로를 따라 의정부역 방향 직진 후 평화로에서 태평로로 진입하세요.</div>
+        <div class="guide" id="g-10">마지막 지점입니다. 전신주에 부착된 벽보들을 모두 제거하고 업무를 종료하세요.</div>
         
         <div class="btn-group">
-            <button class="btn btn-tts" onclick="speakText('title-2', 'guide-2')">안내</button>
-            <a href="tmap://route?goalname=태평로 132&goaly=37.7455&goalx=127.0495" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7455&dlng=127.0495&dname=태평로 132&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <button class="btn btn-tts" onclick="handleSpeak('t-10', 'g-10')">안내</button>
+            <a href="tmap://route?goalname=가능동 663-21&goaly=37.7538&goalx=127.0365" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7538&dlng=127.0365&dname=가능동 663-21&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
-    
-    </div>
+</div>
 
 <script>
-    function speakText(titleId, guideId) {
-        // 이전 음성이 재생 중이면 중단
+    function handleSpeak(tId, gId) {
+        if (!('speechSynthesis' in window)) {
+            alert("이 브라우저는 음성 안내를 지원하지 않습니다. 크롬이나 삼성 브라우저를 사용해 주세요.");
+            return;
+        }
+
+        // 이전 음성 즉시 중단
         window.speechSynthesis.cancel();
 
-        const title = document.getElementById(titleId).innerText;
-        const guide = document.getElementById(guideId).innerText;
-        const message = `${title}. 이동 가이드입니다. ${guide}`;
+        const titleText = document.getElementById(tId).innerText;
+        const guideText = document.getElementById(gId).innerText;
+        const fullMessage = titleText + ". " + guideText;
 
-        const utterance = new SpeechSynthesisUtterance(message);
-        utterance.lang = 'ko-KR';
-        utterance.rate = 1.0; // 속도 (0.1 ~ 10)
-        utterance.pitch = 1.0; // 음높이 (0 ~ 2)
-
-        window.speechSynthesis.speak(utterance);
+        const speech = new SpeechSynthesisUtterance(fullMessage);
+        speech.lang = 'ko-KR';
+        speech.rate = 1.0;
+        
+        // 일부 모바일 브라우저에서 목소리가 안 나오는 경우를 대비해 기본 목소리 설정
+        window.speechSynthesis.speak(speech);
+        
+        console.log("TTS 재생 시도:", fullMessage);
     }
 </script>
 
