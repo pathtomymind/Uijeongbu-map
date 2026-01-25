@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="2026-01-25 의정부 정비 전체 경로 V4">
+    <meta property="og:description" content="요약 박스 제거 및 주소 표시가 완료된 최종 순찰 경로 지도입니다.">
+    <title>2026-01-25 Full Route V4</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Apple SD Gothic Neo', sans-serif; }
+        #map { height: 100vh; width: 100vw; }
+        /* 지점명과 주소가 들어갈 팝업/레이블 스타일 */
+        .marker-label { font-weight: bold; font-size: 13px; line-height: 1.4; }
+        .addr-text { font-weight: normal; color: #666; font-size: 11px; display: block; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+    <script>
+        // 지도 초기화 (의정부 중심부)
+        var map = L.map('map').setView([37.745, 127.065], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        // 의정부 관내 정밀 좌표 및 주소 데이터 (37.x 위도 확인 완료)
+        const points = [
+            { name: "의정부시청 (출발)", addr: "시민로 1", lat: 37.7381, lng: 127.0333 },
+            { name: "가금교 삼거리", addr: "녹양동 산1-4", lat: 37.7612, lng: 127.0321 }, //
+            { name: "백정밥상 앞", addr: "가능동 663-9", lat: 37.7518, lng: 127.0365 }, //
+            { name: "세븐일레븐 가능SK점", addr: "가능동 663-21", lat: 37.7505, lng: 127.0388 }, //
+            { name: "동진종합상사", addr: "가능동 205-1", lat: 37.7492, lng: 127.0435 }, //
+            { name: "화순식당", addr: "태평로 132", lat: 37.7455, lng: 127.0512 }, //
+            { name: "민락동 910", addr: "민락로 279 앞", lat: 37.7488, lng: 127.0955 }, //
+            { name: "고산동 874", addr: "고산수자인 정문", lat: 37.7395, lng: 127.1065 }, //
+            { name: "산곡동 730 CU", addr: "수암로 25 인근", lat: 37.7302, lng: 127.1041 }, //
+            { name: "산곡동 810 삼거리", addr: "산곡동 810", lat: 37.7215, lng: 127.0922 }, //
+            { name: "의정부시청 (복귀)", addr: "시민로 1", lat: 37.7381, lng: 127.0333 }
+        ];
+
+        // 1. 순회 구간 (파란색)
+        L.Routing.control({
+            waypoints: points.slice(0, 10).map(p => L.latLng(p.lat, p.lng)),
+            lineOptions: { styles: [{ color: 'blue', weight: 6, opacity: 0.6 }] },
+            createMarker: function(i, wp) {
+                return L.marker(wp.latLng).bindPopup(
+                    `<div class="marker-label">${points[i].name}<span class="addr-text">${points[i].addr}</span></div>`
+                ).openPopup(); // 처음부터 팝업이 열려있게 설정
+            },
+            addWaypoints: false,
+            routeWhileDragging: false
+        }).addTo(map);
+
+        // 2. 복귀 구간 (빨간색)
+        L.Routing.control({
+            waypoints: [
+                L.latLng(points[9].lat, points[9].lng),
+                L.latLng(points[10].lat, points[10].lng)
+            ],
+            lineOptions: { styles: [{ color: 'red', weight: 6, opacity: 0.8, dashArray: '10, 10' }] },
+            createMarker: function() { return null; },
+            addWaypoints: false
+        }).addTo(map);
+    </script>
+</body>
+</html>
