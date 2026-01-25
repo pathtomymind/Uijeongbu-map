@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>불법옥외광고물 정비 최적화 경로</title>
+    <meta property="og:title" content="의정부 불법광고물 정비 경로">
+    <meta property="og:description" content="제미나이가 설계한 최적화 순회 동선 안내입니다.">
     <style>
         body {
             margin: 0;
             padding: 20px;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            font-family: 'Pretendard', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             display: flex;
@@ -22,7 +24,7 @@
         header {
             text-align: center;
             color: white;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         header h1 { margin: 0; font-size: 1.5rem; }
         header p { margin: 5px 0 0; font-size: 0.85rem; opacity: 0.9; }
@@ -32,9 +34,8 @@
             padding: 15px;
             border-radius: 15px;
             margin-bottom: 20px;
-            text-align: center;
             font-weight: bold;
-            font-size: 0.9rem;
+            text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
@@ -43,56 +44,57 @@
             border-radius: 20px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
             position: relative;
         }
         .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
-        .card.end { background: linear-gradient(to right, #f2994a, #f2c94c); color: white; }
-        
+        .card.end { background: linear-gradient(to right, #f83600, #f9d423); color: white; }
+
         .badge {
             display: inline-block;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            background: #4A90E2;
-            color: white;
             text-align: center;
-            line-height: 28px;
+            line-height: 30px;
             font-weight: bold;
             margin-right: 10px;
+            background: #4A90E2;
+            color: white;
         }
-        .start .badge, .end .badge { background: white; color: #333; }
+        .start .badge { background: white; color: #11998e; }
+        .end .badge { background: white; color: #f83600; }
 
-        .title { font-size: 1.1rem; font-weight: bold; margin-bottom: 12px; display: flex; align-items: center; }
-        
+        .title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; }
+
         .info-box {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 15px;
+            background: #f4f4f4;
+            padding: 12px;
+            border-radius: 10px;
             font-size: 0.9rem;
+            margin-bottom: 15px;
             color: #444;
-            line-height: 1.6;
         }
-        .info-box div { margin-bottom: 4px; }
-        .info-box b { color: #222; }
+        .info-line { margin-bottom: 5px; }
+        .info-label { font-weight: 700; color: #666; margin-right: 5px; }
 
-        .guide { font-size: 0.75rem; color: #666; margin-top: 12px; padding-left: 5px; border-left: 3px solid #ddd; }
-        .reason { font-size: 0.75rem; color: #764ba2; font-weight: bold; margin-top: 8px; }
+        .guide { font-size: 0.8rem; color: #777; margin-bottom: 15px; line-height: 1.4; }
+        .start .guide, .end .guide { color: rgba(255,255,255,0.8); }
 
-        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-group { display: flex; gap: 10px; }
         .btn {
             flex: 1;
             padding: 12px;
             border-radius: 10px;
             text-align: center;
             text-decoration: none;
-            color: white;
             font-weight: bold;
             font-size: 0.9rem;
+            color: white;
             transition: opacity 0.2s;
         }
         .btn-tmap { background: linear-gradient(45deg, #8e2de2, #4a00e0); }
-        .btn-naver { background: linear-gradient(45deg, #00c73c, #00bf20); }
+        .btn-naver { background: linear-gradient(45deg, #00c853, #b2ff59); }
     </style>
 </head>
 <body>
@@ -108,162 +110,154 @@
     </div>
 
     <div class="card start">
-        <div class="title"><span class="badge">1</span> 의정부시청 (출발)</div>
+        <div class="title"><span class="badge">1</span> 출발: 의정부시청</div>
         <div class="info-box" style="background: rgba(255,255,255,0.2); color: white;">
             주소: 경기도 의정부시 시민로 1
         </div>
-        <div class="reason">시청을 기점으로 태평로 방면부터 순찰을 시작합니다.</div>
+        <div class="guide">정비를 시작합니다. 시민로를 따라 가능동 방향으로 이동하세요.</div>
+    </div>
+
+    <div class="card">
+        <div class="title"><span class="badge">2</span> 가능동 663-9 (백정밥상 앞)</div>
+        <div class="info-box">
+            <div class="info-line"><span class="info-label">원래순번:</span> 2</div>
+            <div class="info-line"><span class="info-label">주소:</span> 가능동 663-9</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 푸르넷 광고 벽보</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 건물 외벽 붉은 벽돌 구간에 부착된 벽보</div>
+        </div>
+        <div class="guide">시청 인근에서 가장 가까운 지점입니다. 정비 후 북쪽 SK아파트 방향으로 직진하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=의정부시청&goaly=37.7501&goalx=127.0331" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7501&dlng=127.0331&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=백정밥상&goaly=37.7512&goalx=127.0321" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7512&dlng=127.0321&dname=백정밥상&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">2</span> 태평로 132 (화순식당)</div>
+        <div class="title"><span class="badge">3</span> 가능동 663-21 (가능SK점 사거리)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 12</div>
-            <div><b>주소:</b> 태평로 132 (화순식당)</div>
-            <div><b>민원내용:</b> 광고 현수막 (에어라이트)</div>
-            <div><b>현장사진요약:</b> 식당 입구 노란색 에어라이트 입간판</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 3, 4, 5</div>
+            <div class="info-line"><span class="info-label">주소:</span> 가능동 663-21 (SK아파트 후문 인근)</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 벽보</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 사거리 전신주 및 아파트 후문 담장 주변 벽보 다수</div>
         </div>
-        <div class="guide">시청에서 시민로를 따라 의정부역 방향 직진 후 평화로에서 태평로로 진입하세요.</div>
+        <div class="guide">동일 구간 내 전신주 3개소가 인접해 있으니 도보로 함께 정비하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=태평로 132 화순식당&goaly=37.7455&goalx=127.0495" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7455&dlng=127.0495&dname=태평로 132 화순식당&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=세븐일레븐가능SK점&goaly=37.7518&goalx=127.0335" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7518&dlng=127.0335&dname=세븐일레븐가능SK점&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">3</span> 민락로 279 (민락동 910)</div>
+        <div class="title"><span class="badge">4</span> 가능동 205-1 (동진종합상사)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 11</div>
-            <div><b>주소:</b> 민락동 910 (민락로 279 앞)</div>
-            <div><b>민원내용:</b> 광고 현수막</div>
-            <div><b>현장사진요약:</b> 도로변 버스 정류장 인근 현수막</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 6</div>
+            <div class="info-line"><span class="info-label">주소:</span> 가능동 205-1</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 분양 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 상가 전면부 도로 가로등 사이 현수막</div>
         </div>
-        <div class="guide">금오동 방면 거쳐 민락2지구 방향으로 이동하세요.</div>
+        <div class="guide">가금로를 타기 전 큰길가에 위치해 있습니다.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=민락동 910&goaly=37.7512&goalx=127.0985" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7512&dlng=127.0985&dname=민락동 910&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=동진종합상사&goaly=37.7538&goalx=127.0425" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7538&dlng=127.0425&dname=동진종합상사&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">4</span> 고산동 874 (휴스토리)</div>
+        <div class="title"><span class="badge">5</span> 녹양동 산1-4 (가금교 삼거리)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 10</div>
-            <div><b>주소:</b> 고산동 874 (휴스토리 정문 주변)</div>
-            <div><b>민원내용:</b> 광고 현수막</div>
-            <div><b>현장사진요약:</b> 아파트 정문 도로변 펜스 현수막</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 1</div>
+            <div class="info-line"><span class="info-label">주소:</span> 녹양동 산1-4</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 분양 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 가금교 진입 전 가로수 사이에 설치된 대형 현수막</div>
         </div>
-        <div class="guide">민락지구에서 고산지구 방향 남측으로 내려가며 정비합니다.</div>
+        <div class="guide">가금로 끝단 삼거리입니다. 정비 후 평화로를 이용해 시내(태평로)로 진입하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=고산동 874&goaly=37.7385&goalx=127.1082" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7385&dlng=127.1082&dname=고산동 874&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=가금교삼거리&goaly=37.7612&goalx=127.0392" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7612&dlng=127.0392&dname=가금교삼거리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">5</span> 수암로 25 (산곡동 730)</div>
+        <div class="title"><span class="badge">6</span> 태평로 132 (화순식당)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 7</div>
-            <div><b>주소:</b> 산곡동 730 (고산수자인 정문 주변)</div>
-            <div><b>민원내용:</b> 광고 현수막</div>
-            <div><b>현장사진요약:</b> CU 주변 펜스 대형 분양 현수막</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 12</div>
+            <div class="info-line"><span class="info-label">주소:</span> 태평로 132</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 식당 앞 노란색 에어라이트 및 벽면 광고물</div>
         </div>
-        <div class="guide">수암로를 따라 산곡동 중심부로 진입하세요.</div>
+        <div class="guide">시내 중심부입니다. 정비 후 천보로를 통해 민락동 방향으로 이동하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=산곡동 730&goaly=37.7325&goalx=127.1125" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7325&dlng=127.1125&dname=산곡동 730&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=화순식당&goaly=37.7445&goalx=127.0512" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7445&dlng=127.0512&dname=화순식당&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">6</span> 산곡동 810 삼거리</div>
+        <div class="title"><span class="badge">7</span> 민락동 910 (민락로 279 앞)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 8, 9 (통합)</div>
-            <div><b>주소:</b> 산곡동 810 삼거리 주변</div>
-            <div><b>민원내용:</b> 광고 현수막</div>
-            <div><b>현장사진요약:</b> 반사경 및 버스정류장 인근 다수 현수막</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 11</div>
+            <div class="info-line"><span class="info-label">주소:</span> 민락로 279 앞 버스정류장 부근</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 도로변 펜스에 길게 설치된 분양 홍보물</div>
         </div>
-        <div class="guide">산곡동 삼거리 일대를 정비한 후 다시 북서쪽으로 이동합니다.</div>
+        <div class="guide">민락지구 초입 정류장입니다. 정비 후 남쪽 고산지구로 이동하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=산곡동 810&goaly=37.7285&goalx=127.1085" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7285&dlng=127.1085&dname=산곡동 810&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=민락동910&goaly=37.7485&goalx=127.0912" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7485&dlng=127.0912&dname=민락동910&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">7</span> 가능동 205-1 (동진종합상사)</div>
+        <div class="title"><span class="badge">8</span> 고산동 874 (휴스토리 정문)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 6</div>
-            <div><b>주소:</b> 가능동 205-1 (동진종합상사)</div>
-            <div><b>민원내용:</b> 분양 현수막</div>
-            <div><b>현장사진요약:</b> 사진 없음 (현장 확인 필요)</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 10</div>
+            <div class="info-line"><span class="info-label">주소:</span> 고산동 874 주변</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 아파트 정문 펜스 대형 광고 현수막</div>
         </div>
-        <div class="guide">서부로 또는 신흥로를 통해 가능동 방면으로 크게 이동합니다.</div>
+        <div class="guide">단지 정문 진입로입니다. 정비 후 수암로를 따라 산곡동으로 내려갑니다.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=가능동 205-1&goaly=37.7585&goalx=127.0425" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7585&dlng=127.0425&dname=가능동 205-1&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=고산동휴스토리&goaly=37.7321&goalx=127.1012" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7321&dlng=127.1012&dname=고산동휴스토리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">8</span> 가금교 삼거리 (녹양동)</div>
+        <div class="title"><span class="badge">9</span> 산곡동 730 (고산수자인 정문)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 1</div>
-            <div><b>주소:</b> 녹양동 산1-4 (가금교 삼거리)</div>
-            <div><b>민원내용:</b> 분양 현수막</div>
-            <div><b>현장사진요약:</b> 도로변 가로수 사이 걸린 현수막</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 7</div>
+            <div class="info-line"><span class="info-label">주소:</span> 산곡동 730 (CU 주변 일대)</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 보도 펜스에 연속으로 부착된 대형 현수막군</div>
         </div>
-        <div class="guide">가능동 북단에서 녹양동 방향 가금교 삼거리로 이동하세요.</div>
+        <div class="guide">산곡동 남쪽 마지막 대단지 구간입니다.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=가금교 삼거리&goaly=37.7665&goalx=127.0385" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7665&dlng=127.0385&dname=가금교 삼거리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=고산수자인정문&goaly=37.7255&goalx=127.1085" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7255&dlng=127.1085&dname=고산수자인정문&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="title"><span class="badge">9</span> 가능동 663-9 (백정밥상)</div>
+        <div class="title"><span class="badge">10</span> 산곡동 810 (삼거리 반사경)</div>
         <div class="info-box">
-            <div><b>원래순번:</b> 2</div>
-            <div><b>주소:</b> 가능동 663-9 (백정밥상 앞)</div>
-            <div><b>민원내용:</b> 푸르넷 광고 벽보</div>
-            <div><b>현장사진요약:</b> 건물 외벽 벽돌 하단에 부착된 벽보</div>
+            <div class="info-line"><span class="info-label">원래순번:</span> 8, 9</div>
+            <div class="info-line"><span class="info-label">주소:</span> 산곡동 810 삼거리 주변</div>
+            <div class="info-line"><span class="info-label">민원내용:</span> 광고 현수막</div>
+            <div class="info-line"><span class="info-label">현장사진요약:</span> 삼거리 반사경 및 인근 버스정류장 펜스 현수막</div>
         </div>
-        <div class="guide">다시 남쪽으로 내려오며 가능동 안쪽 주택가를 정비합니다.</div>
+        <div class="guide">오늘의 마지막 정비 지점입니다. 정비 후 장암역 방향으로 우회하여 복귀하세요.</div>
         <div class="btn-group">
-            <a href="tmap://route?goalname=가능동 663-9&goaly=37.7542&goalx=127.0371" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7542&dlng=127.0371&dname=가능동 663-9&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="title"><span class="badge">10</span> 가능동 663-21 (세븐일레븐)</div>
-        <div class="info-box">
-            <div><b>원래순번:</b> 3, 4, 5 (통합)</div>
-            <div><b>주소:</b> 가능동 663-21 (세븐일레븐 및 SK아파트 후문)</div>
-            <div><b>민원내용:</b> 광고 벽보</div>
-            <div><b>현장사진요약:</b> 전신주에 다닥다닥 부착된 다수의 광고 벽보</div>
-        </div>
-        <div class="guide">마지막 지점입니다. 전신주에 부착된 벽보들을 모두 제거하세요.</div>
-        <div class="btn-group">
-            <a href="tmap://route?goalname=가능동 663-21&goaly=37.7538&goalx=127.0365" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7538&dlng=127.0365&dname=가능동 663-21&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            <a href="tmap://route?goalname=산곡동삼거리&goaly=37.7188&goalx=127.1121" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7188&dlng=127.1121&dname=산곡동삼거리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
         </div>
     </div>
 
     <div class="card end">
-        <div class="title"><span class="badge">11</span> 의정부시청 (복귀)</div>
+        <div class="title"><span class="badge">11</span> 복귀: 의정부시청</div>
         <div class="info-box" style="background: rgba(255,255,255,0.2); color: white;">
             주소: 경기도 의정부시 시민로 1
         </div>
-        <div class="reason">마지막 지점에서 시청까지 약 1.5km 거리로 매우 가깝습니다. 정비 업무를 마무리합니다.</div>
-        <div class="btn-group">
-            <a href="tmap://route?goalname=의정부시청&goaly=37.7501&goalx=127.0331" class="btn btn-tmap">티맵</a>
-            <a href="nmap://route/car?dlat=37.7501&dlng=127.0331&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
-        </div>
+        <div class="guide">모든 정비 업무를 마쳤습니다. 안전하게 복귀하세요!</div>
     </div>
 
 </div>
