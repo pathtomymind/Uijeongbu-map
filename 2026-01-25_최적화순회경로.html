@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-01-25 불법옥외광고물정비 최적화 순회 경로 V1</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+        }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .card.start-end {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+        }
+        .badge {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .badge-start { background-color: #2ecc71; }
+        .badge-mid { background-color: #3498db; }
+        .badge-end { background-color: #e67e22; }
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .card.start-end .info-box { background: rgba(255,255,255,0.2); color: white; }
+        .coords {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            margin-top: 10px;
+            color: #666;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn-tmap { background: linear-gradient(to right, #8e2de2, #4a00e0); }
+        .btn-naver { background: linear-gradient(to right, #00c73c, #00bf18); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>불법옥외광고물 정비 최적화 경로 안내</h2>
+    <p style="font-size: 13px; opacity: 0.9;">이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+</div>
+
+<div class="summary-box">
+    📍 총 9개 지점 | 출발: 의정부시청 → 복귀: 의정부시청
+</div>
+
+<div class="card start-end">
+    <span class="badge badge-start">1</span>
+    <strong style="font-size: 18px;">의정부시청 (출발)</strong>
+    <div class="info-box">
+        주소: 경기도 의정부시 시민로 1
+    </div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0333" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7381&dlng=127.0333&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">2</span>
+    <strong style="font-size: 16px;">가금교 삼거리 (녹양동 산1-4)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 1<br>
+        <b>민원내용:</b> 분양 현수막 (이여은 담당)<br>
+        <b>현장사진요약:</b> 가로수 사이 전신주에 부착된 분홍색 계열 현수막
+    </div>
+    <div class="coords">현위치 → 목적지: 가금교삼거리 37.7612/127.0321</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=가금교삼거리&goaly=37.7612&goalx=127.0321" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7612&dlng=127.0321&dname=가금교삼거리&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">3</span>
+    <strong style="font-size: 16px;">백정밥상 앞 (가능동 663-9)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 2<br>
+        <b>민원내용:</b> 푸르넷 광고 벽보<br>
+        <b>현장사진요약:</b> 붉은 벽돌 담장에 부착된 파란색/흰색 벽보들
+    </div>
+    <div class="coords">현위치 → 목적지: 백정밥상 37.7518/127.0365</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=백정밥상&goaly=37.7518&goalx=127.0365" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7518&dlng=127.0365&dname=백정밥상&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">4</span>
+    <strong style="font-size: 16px;">세븐일레븐 가능SK점 사거리 및 인근 전주</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 3, 4, 5<br>
+        <b>민원내용:</b> 광고 벽보 통합 정비 (SK아파트 후문 인근)<br>
+        <b>현장사진요약:</b> 사거리 코너 전신주 및 인접 전주들에 부착된 다수의 광고 벽보
+    </div>
+    <div class="coords">현위치 → 목적지: 세븐일레븐가능SK점 37.7505/127.0388</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=세븐일레븐가능SK점&goaly=37.7505&goalx=127.0388" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7505&dlng=127.0388&dname=세븐일레븐가능SK점&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">5</span>
+    <strong style="font-size: 16px;">태평로 132 (화순식당)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 12<br>
+        <b>민원내용:</b> 광고 현수막<br>
+        <b>현장사진요약:</b> 식당 앞 보도에 설치된 노란색 에어라이트(풍선간판) 및 건물 외벽
+    </div>
+    <div class="coords">현위치 → 목적지: 화순식당 37.7455/127.0512</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=화순식당&goaly=37.7455&goalx=127.0512" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7455&dlng=127.0512&dname=화순식당&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">6</span>
+    <strong style="font-size: 16px;">동진종합상사 (가능동 205-1)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 6<br>
+        <b>민원내용:</b> 분양 현수막<br>
+        <b>현장사진요약:</b> 상가 밀집 지역 도로변 펜스 또는 가로수 설치물
+    </div>
+    <div class="coords">현위치 → 목적지: 동진종합상사 37.7492/127.0435</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=동진종합상사&goaly=37.7492&goalx=127.0435" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7492&dlng=127.0435&dname=동진종합상사&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">7</span>
+    <strong style="font-size: 16px;">민락동 910 (민락로 279 앞 버스정류장)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 11<br>
+        <b>민원내용:</b> 광고 현수막 (최수현 담당)<br>
+        <b>현장사진요약:</b> 넓은 대로변 버스정류장 인근 펜스에 부착된 현수막
+    </div>
+    <div class="coords">현위치 → 목적지: 민락동910 37.7488/127.0955</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=민락동910&goaly=37.7488&goalx=127.0955" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7488&dlng=127.0955&dname=민락동910&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge badge-mid">8</span>
+    <strong style="font-size: 16px;">산곡동 810 삼거리 (반사경 및 정류장 주변)</strong>
+    <div class="info-box">
+        <b>원래순번:</b> 8, 9<br>
+        <b>민원내용:</b> 광고 현수막 통합 정비<br>
+        <b>현장사진요약:</b> 도로 코너 반사경 지주 및 버스정류장 인근 펜스에 걸린 노란색/오렌지색 분양 현수막
+    </div>
+    <div class="coords">현위치 → 목적지: 산곡동810 37.7215/127.0922</div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=산곡동810&goaly=37.7215&goalx=127.0922" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7215&dlng=127.0922&dname=산곡동810&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+<div class="card start-end">
+    <span class="badge badge-end">9</span>
+    <strong style="font-size: 18px;">의정부시청 (복귀)</strong>
+    <div class="info-box">
+        주소: 경기도 의정부시 시민로 1
+    </div>
+    <div class="btn-group">
+        <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0333" class="btn btn-tmap">티맵</a>
+        <a href="nmap://route/car?dlat=37.7381&dlng=127.0333&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+    </div>
+</div>
+
+</body>
+</html>
