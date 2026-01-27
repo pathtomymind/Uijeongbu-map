@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 전체 경로 시각화</title>
+    
+    <meta property="og:title" content="의정부시 불법옥외광고물 정비 최적화 경로">
+    <meta property="og:description" content="제미나이가 설계한 도로 기반 최적화 순회 경로 지도입니다.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+        #map { height: 100vh; width: 100vw; }
+        /* Hide Leaflet Routing Machine Control Panel */
+        .leaflet-routing-container { display: none !important; }
+        .custom-tooltip {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #764ba2;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    // 1. 데이터 정의 (카드 UI와 1:1 매칭)
+    const points = [
+        { lat: 37.7381, lng: 127.0333, name: "1. 의정부시청 (출발)" },
+        { lat: 37.7554, lng: 127.0722, name: "2. 금오동 291-2 (꽃동네 인근)" },
+        { lat: 37.7538, lng: 127.1005, name: "3. 낙양동 758-1 (유노어린이집)" },
+        { lat: 37.7478, lng: 127.1018, name: "4. 낙양동 711 (금강펜테리움 정문)" },
+        { lat: 37.7431, lng: 127.1102, name: "5. 민락동 908 (엘레트 19단지)" },
+        { lat: 37.7305, lng: 127.1082, name: "6. 고산동 865 (고산217 앞)" },
+        { lat: 37.7285, lng: 127.1052, name: "7. 고산동 888 (삼거리 주변)" },
+        { lat: 37.7022, lng: 127.0544, name: "8. 장암동 96-1 (도로 옆)" },
+        { lat: 37.7005, lng: 127.0515, name: "9. 장암동 산 110-19" },
+        { lat: 37.7125, lng: 127.0588, name: "10. 장암동 20 (광명교회 인근)" },
+        { lat: 37.7155, lng: 127.0601, name: "11. 장암동 55-4 (도로변)" },
+        { lat: 37.7245, lng: 127.0455, name: "12. 회룡로 79 (어린이도서관)" },
+        { lat: 37.7205, lng: 127.0422, name: "13. 평화로 238 (럭키가든)" },
+        { lat: 37.7381, lng: 127.0333, name: "14. 의정부시청 (복귀)" }
+    ];
+
+    // 2. 지도 초기화 (의정부 중심)
+    const map = L.map('map').setView([37.7381, 127.06], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // 3. 마커 및 상시 툴팁 생성
+    points.forEach((pt, idx) => {
+        let tooltipDirection = 'right';
+        if (idx === 0) tooltipDirection = 'top';
+        if (idx === points.length - 1) tooltipDirection = 'bottom';
+
+        L.marker([pt.lat, pt.lng])
+            .addTo(map)
+            .bindTooltip(pt.name, {
+                permanent: true,
+                direction: tooltipDirection,
+                className: 'custom-tooltip'
+            });
+    });
+
+    // 4. 실제 도로 기반 경로 생성 (기점 -> 마지막 지점: 파란색 실선)
+    const workWaypoints = points.slice(0, points.length - 1).map(pt => L.latLng(pt.lat, pt.lng));
+    L.Routing.control({
+        waypoints: workWaypoints,
+        lineOptions: {
+            styles: [{ color: '#0984e3', weight: 6, opacity: 0.8 }]
+        },
+        router: L.Routing.osrmv1({ serviceUrl: 'https://router.project-osrm.org/route/v1' }),
+        addWaypoints: false,
+        draggableWaypoints: false,
+        createMarker: () => null // 마커 중복 방지
+    }).addTo(map);
+
+    // 5. 복귀 경로 생성 (마지막 지점 -> 시청: 빨간색 점선)
+    const returnWaypoints = [
+        L.latLng(points[points.length - 2].lat, points[points.length - 2].lng),
+        L.latLng(points[points.length - 1].lat, points[points.length - 1].lng)
+    ];
+    L.Routing.control({
+        waypoints: returnWaypoints,
+        lineOptions: {
+            styles: [{ color: '#e17055', weight: 6, opacity: 0.7, dashArray: '10, 10' }]
+        },
+        router: L.Routing.osrmv1({ serviceUrl: 'https://router.project-osrm.org/route/v1' }),
+        addWaypoints: false,
+        draggableWaypoints: false,
+        createMarker: () => null
+    }).addTo(map);
+
+</script>
+</body>
+</html>
