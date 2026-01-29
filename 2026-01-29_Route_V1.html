@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 최적화 경로 안내</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
+        .card.end { background: linear-gradient(to right, #f83600, #fe8c00); color: white; }
+        .badge {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            background: #764ba2;
+            color: white;
+        }
+        .card.start .badge { background: #0b6623; }
+        .card.end .badge { background: #b22222; }
+        .info-box {
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .card.start .info-box, .card.end .info-box { background: rgba(255,255,255,0.2); color: white; }
+        .guide {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        .card.start .guide, .card.end .guide { color: #eee; }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .btn-tmap { background: linear-gradient(45deg, #667eea, #764ba2); }
+        .btn-nmap { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+        <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+    </header>
+
+    <div class="summary-box">
+        오늘의 점검 경로 요약: 의정부시청 출발 → 총 8개 지점 → 의정부시청 복귀
+    </div>
+
+    <div class="card start">
+        <span class="badge">1</span>
+        <strong>출발: 의정부시청</strong>
+        <div class="info-box">주소: 경기도 의정부시 시민로 1</div>
+        <div class="guide">평화로를 이용해 망월사역 방면 신한대학교로 이동합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0337" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7381&dlng=127.0337&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">2</span>
+        <strong>호원동 (신한대학교 우체국)</strong>
+        <div class="info-box">
+            원래순번: 추가지점<br>
+            주소: 경기도 의정부시 호암로 95 (신한대학교)<br>
+            민원내용: 개인 업무(우체국 방문)<br>
+            현장사진요약: 신한대학교 교내 우체국 위치 확인
+        </div>
+        <div class="guide">정무문 방면에서 의정부역 서부교차로 방면으로 북상합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=신한대학교우체국&goaly=37.7145&goalx=127.0452" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7145&dlng=127.0452&dname=신한대학교우체국&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">3</span>
+        <strong>의정부동 (헬스트론)</strong>
+        <div class="info-box">
+            원래순번: 5<br>
+            주소: 의정부동 94-4 (헬스트론 의정부지점)<br>
+            민원내용: 입간판(에어라이트) 정비 안내 요청<br>
+            현장사진요약: 보도 위 설치된 대형 원형 에어라이트
+        </div>
+        <div class="guide">인근 화순식당 지점으로 이동합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=헬스트론의정부지점&goaly=37.7342&goalx=127.0415" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7342&dlng=127.0415&dname=헬스트론의정부지점&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">4</span>
+        <strong>의정부동 (화순식당)</strong>
+        <div class="info-box">
+            원래순번: 6<br>
+            주소: 의정부동 9-40 (화순식당)<br>
+            민원내용: 에어라이트 및 창문 스커터 광고물 정비<br>
+            현장사진요약: 식당 입구 노란색 에어라이트 및 유리창 시트지
+        </div>
+        <div class="guide">의정부역 방면 수림정으로 이동합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=화순식당&goaly=37.7358&goalx=127.0422" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7358&dlng=127.0422&dname=화순식당&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">5</span>
+        <strong>의정부동 (수림정)</strong>
+        <div class="info-box">
+            원래순번: 1<br>
+            주소: 의정부동 96-8 (수림정)<br>
+            민원내용: 입간판(배너) 정비<br>
+            현장사진요약: 보도 블록 위 붉은색 의자와 메뉴 배너
+        </div>
+        <div class="guide">의정부역 지하상가 인근으로 이동합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=수림정&goaly=37.7345&goalx=127.0435" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7345&dlng=127.0435&dname=수림정&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">6</span>
+        <strong>의정부동 (의정부역 5번출구)</strong>
+        <div class="info-box">
+            원래순번: 4<br>
+            주소: 의정부동 168-54 (의정부역 5번출구 인근)<br>
+            민원내용: 입간판(배너) - 무인프린트<br>
+            현장사진요약: 지하상가 입구 캐노피 아래 파란색 배너
+        </div>
+        <div class="guide">중앙로 인근 천수암 지점으로 이동합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=의정부역5번출구&goaly=37.7392&goalx=127.0465" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7392&dlng=127.0465&dname=의정부역5번출구&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">7</span>
+        <strong>의정부동 (천수암)</strong>
+        <div class="info-box">
+            원래순번: 2, 3 (병합)<br>
+            주소: 의정부동 140-27 (천수암/스시담 옆)<br>
+            민원내용: 입간판(배너) 및 타이어 고정 입간판 정비<br>
+            현장사진요약: 쓰러진 노란 배너 및 타이어 위 사주타로 간판
+        </div>
+        <div class="guide">금오로를 통해 민락동 방면으로 크게 회전합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=천수암&goaly=37.7412&goalx=127.0485" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7412&dlng=127.0485&dname=천수암&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="badge">8</span>
+        <strong>민락동 (송산초등학교 앞)</strong>
+        <div class="info-box">
+            원래순번: 7<br>
+            주소: 민락동 845 (송산초등학교 앞 3거리 전신주)<br>
+            민원내용: 족자형 현수막 정비<br>
+            현장사진요약: 전신주에 부착된 헬스장 광고 족자 현수막
+        </div>
+        <div class="guide">천보로를 거쳐 시청으로 복귀하며 업무를 마무리합니다.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=송산초등학교&goaly=37.7485&goalx=127.0955" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7485&dlng=127.0955&dname=송산초등학교&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+    <div class="card end">
+        <span class="badge">9</span>
+        <strong>복귀: 의정부시청</strong>
+        <div class="info-box">주소: 경기도 의정부시 시민로 1</div>
+        <div class="guide">오늘 하루도 고생 많으셨습니다! 안전하게 복귀하세요.</div>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=의정부시청&goaly=37.7381&goalx=127.0337" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7381&dlng=127.0337&dname=의정부시청&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
