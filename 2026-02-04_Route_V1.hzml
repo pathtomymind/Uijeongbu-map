@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 최적화 경로 안내</title>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header p { margin: 5px 0 0; font-size: 0.85rem; opacity: 0.9; }
+        
+        .summary-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
+        .card.end { background: linear-gradient(to right, #f83600, #f9d423); color: white; }
+        
+        .badge {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+        .badge.start { background-color: #2ecc71; }
+        .badge.mid { background-color: #3498db; }
+        .badge.end { background-color: #e67e22; }
+
+        .title { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
+        .info-box {
+            background-color: #f1f3f5;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .info-box div { margin-bottom: 5px; }
+        .card.start .info-box, .card.end .info-box { background: rgba(255,255,255,0.2); color: white; }
+
+        .guide { font-size: 0.8rem; color: #666; margin-top: 10px; font-style: italic; }
+        .card.start .guide, .card.end .guide { color: #eee; }
+
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .btn-tmap { background: linear-gradient(to right, #8e2de2, #4a00e0); }
+        .btn-naver { background: linear-gradient(to right, #00c73c, #00bf19); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+        <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+    </header>
+
+    <div class="summary-box">
+        오늘의 점검 경로 요약: 의정부시청 출발 → 총 28개 지점 → 의정부시청 복귀
+    </div>
+
+    <div class="card start">
+        <div class="title"><span class="badge start">1</span> 의정부시청 (출발)</div>
+        <div class="info-box">
+            <div>주소: 경기도 의정부시 시민로 1</div>
+        </div>
+        <p class="guide">기점에서 장비 점검 후 가능동 방면으로 이동을 시작합니다.</p>
+    </div>
+
+    <div class="card">
+        <div class="title"><span class="badge mid">2</span> 가능동 590-27 (맑은물사업소 입구)</div>
+        <div class="info-box">
+            <div>원래순번: 22</div>
+            <div>주소: 가능동 590-27 (맑은물사업소 입구)</div>
+            <div>민원내용: 폐차 벽보</div>
+            <div>현장사진요약: 입구 전신주에 부착된 노란색 폐차 광고</div>
+        </div>
+        <p class="guide">시청에서 흥선교를 건너 가능동 방향 직진</p>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=맑은물사업소입구&goaly=37.7411&goalx=127.0211" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7411&dlng=127.0211&dname=맑은물사업소입구&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="title"><span class="badge mid">3</span> 녹양동 412-7 (녹양역 1번출구)</div>
+        <div class="info-box">
+            <div>원래순번: 19</div>
+            <div>주소: 녹양동 412-7 (녹양역 1번출구)</div>
+            <div>민원내용: 최경자 현수막</div>
+            <div>현장사진요약: 역 광장 가로수에 걸린 파란색 현수막</div>
+        </div>
+        <p class="guide">가능동에서 평화로를 따라 녹양역 방면으로 북상</p>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=녹양역1번출구&goaly=37.7592&goalx=127.0423" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7592&dlng=127.0423&dname=녹양역1번출구&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="title"><span class="badge mid">28</span> 금오동 65-1 (의정부성모병원)</div>
+        <div class="info-box">
+            <div>원래순번: 28</div>
+            <div>주소: 금오동 65-1 (의정부성모병원)</div>
+            <div>민원내용: 광고 현수막</div>
+            <div>현장사진요약: 병원 앞 펜스에 설치된 아파트 분양 광고</div>
+        </div>
+        <p class="guide">민락동 정비 후 동일로를 이용해 시청 방향으로 회귀하는 길목</p>
+        <div class="btn-group">
+            <a href="tmap://route?goalname=의정부성모병원&goaly=37.7586&goalx=127.0784" class="btn btn-tmap">티맵</a>
+            <a href="nmap://route/car?dlat=37.7586&dlng=127.0784&dname=의정부성모병원&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+        </div>
+    </div>
+
+    <div class="card end">
+        <div class="title"><span class="badge end">29</span> 의정부시청 (복귀)</div>
+        <div class="info-box">
+            <div>주소: 경기도 의정부시 시민로 1</div>
+        </div>
+        <p class="guide">금오동/신곡동을 거쳐 시청으로 복귀하여 업무를 종료합니다.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
