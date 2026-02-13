@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 최적화 경로 안내</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        .card.start { background: linear-gradient(135deg, #11998e, #38ef7d); color: white; }
+        .card.end { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        
+        .badge {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+        .badge-mid { background-color: #4a90e2; }
+        
+        .title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #444;
+        }
+        .info-box div { margin-bottom: 5px; }
+        .info-box b { color: #222; }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .btn {
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .btn-tmap { background: linear-gradient(to right, #8e2de2, #4a00e0); }
+        .btn-nmap { background: linear-gradient(to right, #00c853, #b2ff59); color: #004d40; }
+        
+        .guide {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            color: #666;
+            line-height: 1.4;
+        }
+        .reason {
+            font-size: 0.8rem;
+            margin-top: 10px;
+            font-style: italic;
+            color: #764ba2;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+            <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+        </div>
+
+        <div class="summary-box">
+            오늘의 점검 경로 요약: 의정부시청 출발 → 총 15개 지점 → 의정부시청 복귀
+        </div>
+
+        <div class="card start">
+            <div class="title"><span class="badge" style="background:#006400">1</span> 의정부시청 (출발)</div>
+            <div class="info-box" style="background:rgba(255,255,255,0.2); color:white;">
+                주소: 경기도 의정부시 시민로 1
+            </div>
+            <div class="guide" style="color:white;">업무를 시작합니다. 의정부역 방향 신흥로로 이동하세요.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">2</span> 의정부동 549-4 (의정부동)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 4</div>
+                <div><b>주소:</b> 의정부동 549-4</div>
+                <div><b>민원내용:</b> 불법 현수막 제거</div>
+                <div><b>현장사진요약:</b> 담장에 설치된 흰색 가로형 현수막</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=의정부동549-4&goaly=37.7348&goalx=127.0425" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7348&dlng=127.0425&dname=의정부동549-4&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">시청에서 의정부역 방향으로 직진 후 우회전하여 골목 진입.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">3</span> 경의로157번길 22 (의정부3동 경로당)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 5</div>
+                <div><b>주소:</b> 경의로157번길 22, 2층</div>
+                <div><b>민원내용:</b> 간판개선 사업 동의서 징구 및 설명</div>
+                <div><b>현장사진요약:</b> 의정부3동 경로당 건물 2층</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=의정부3동경로당&goaly=37.7352&goalx=127.0468" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7352&dlng=127.0468&dname=의정부3동경로당&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">경의로를 따라 남측으로 이동하여 경로당 방문.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">4</span> 신흥로258번길 25 (해동본타워)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 3</div>
+                <div><b>주소:</b> 신흥로258번길 25 (해동본타워)</div>
+                <div><b>민원내용:</b> 불법 현수막 제거 (고층 외벽)</div>
+                <div><b>현장사진요약:</b> 고층 빌딩 외벽 상단 대형 분양 현수막</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=해동본타워&goaly=37.7385&goalx=127.0412" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7385&dlng=127.0412&dname=해동본타워&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">의정부역 서부 광장 인근 고층 빌딩입니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">5</span> 의정부동 206-1 (중앙교차로)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 10</div>
+                <div><b>주소:</b> 의정부동 206-1 (베르체 악기 앞)</div>
+                <div><b>민원내용:</b> 바닥 스티커 제거</div>
+                <div><b>현장사진요약:</b> 횡단보도 앞 보도블럭 위 둥근 스티커</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=중앙교차로베르체&goaly=37.7422&goalx=127.0458" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7422&dlng=127.0458&dname=중앙교차로베르체&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">중앙로 방향 교차로 횡단보도 지점입니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">6</span> 산곡동 650 (대광로제비앙)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 2</div>
+                <div><b>주소:</b> 서광로 169 부근</div>
+                <div><b>민원내용:</b> 광고 현수막 제거</div>
+                <div><b>현장사진요약:</b> 도로변 안전펜스에 설치된 가로형 현수막</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=산곡동대광로제비앙&goaly=37.7125&goalx=127.0985" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7125&dlng=127.0985&dname=산곡동대광로제비앙&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">민락로를 이용해 산곡동 고산지구로 이동하세요.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">7</span> 산곡동 716 (고산더라피니엘)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 1</div>
+                <div><b>주소:</b> 산곡동 175-5 정문 부근</div>
+                <div><b>민원내용:</b> 광고 현수막 제거</div>
+                <div><b>현장사진요약:</b> 아파트 단지 입구 인근 펜스 현수막</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=고산더라피니엘정문&goaly=37.7162&goalx=127.1025" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7162&dlng=127.1025&dname=고산더라피니엘정문&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">인접한 단지 입구로 이동합니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">8</span> 오목로225번길 162 (민락2지구)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 3 (현장촬영)</div>
+                <div><b>주소:</b> 민락2지구 롯데시네마 인근</div>
+                <div><b>민원내용:</b> 현장 사진 촬영</div>
+                <div><b>현장사진요약:</b> 상가 밀집 지역 도로변</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=민락2지구롯데시네마&goaly=37.7515&goalx=127.1008" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7515&dlng=127.1008&dname=민락2지구롯데시네마&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">고산지구에서 민락2지구 중심상권으로 이동합니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">9</span> 오목로19번길 42 (우영경로당)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 8</div>
+                <div><b>주소:</b> 용현동 우영경로당</div>
+                <div><b>민원내용:</b> 간판개선 사업 동의서 징구</div>
+                <div><b>현장사진요약:</b> 용현동 주택가 내 경로당</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=우영경로당&goaly=37.7405&goalx=127.0852" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7405&dlng=127.0852&dname=우영경로당&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">용현동 방향으로 이동하여 주택가 진입.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">10</span> 용민로21번길 45 (방아다리경로당)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 7</div>
+                <div><b>주소:</b> 용현동 방아다리경로당</div>
+                <div><b>민원내용:</b> 간판개선 사업 동의서 징구</div>
+                <div><b>현장사진요약:</b> 천보교 인근 경로당</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=방아다리경로당&goaly=37.7432&goalx=127.0825" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7432&dlng=127.0825&dname=방아다리경로당&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">만가대 방향에서 북쪽으로 이동.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">11</span> 송산로1181번길 76 (송산동경로당)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 6</div>
+                <div><b>주소:</b> 용현동 송산동(만가대) 경로당</div>
+                <div><b>민원내용:</b> 간판개선 사업 동의서 징구</div>
+                <div><b>현장사진요약:</b> 만가대 교차로 인근 경로당</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=송산동경로당&goaly=37.7388&goalx=127.0882" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7388&dlng=127.0882&dname=송산동경로당&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">만가대 교차로 인근 마을 안쪽입니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">12</span> 천보로122번길 83-6 (곤제노인정)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 9</div>
+                <div><b>주소:</b> 낙양동 곤제노인정 (곤제역 인근)</div>
+                <div><b>민원내용:</b> 간판개선 사업 동의서 징구</div>
+                <div><b>현장사진요약:</b> 곤제역 동측 주택가 노인정</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=곤제노인정&goaly=37.7485&goalx=127.0812" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7485&dlng=127.0812&dname=곤제노인정&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">곤제역 방향으로 이동합니다. 이제 녹양동으로 넘어갑니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">13</span> 녹양동 386-4 (희망학교 인근)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 11, 12</div>
+                <div><b>주소:</b> 녹양동 희망학교 앞 일대</div>
+                <div><b>민원내용:</b> 전신주 벽보 제거</div>
+                <div><b>현장사진요약:</b> 전신주에 부착된 '백악관' 유흥업소 광고물</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=희망학교&goaly=37.7592&goalx=127.0345" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7592&dlng=127.0345&dname=희망학교&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">평화로를 이용해 녹양역을 지나 희망학교 근처로 이동.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">14</span> 녹양동 387-1 (뉴화이트빌 앞)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 13</div>
+                <div><b>주소:</b> 녹양동 뉴화이트빌 앞 전주</div>
+                <div><b>민원내용:</b> 전신주 벽보 제거</div>
+                <div><b>현장사진요약:</b> 전신주 하단 노란/검정 띠 위 광고물</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=뉴화이트빌&goaly=37.7598&goalx=127.0338" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7598&dlng=127.0338&dname=뉴화이트빌&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">희망학교 바로 인근 빌라 단지입니다.</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge badge-mid">15</span> 녹양동 383-6 (한라쉐르빌)</div>
+            <div class="info-box">
+                <div><b>원래순번:</b> 14, 15, 16, 17</div>
+                <div><b>주소:</b> 녹양동 한라쉐르빌, 평화아트빌, parksbill 일대</div>
+                <div><b>민원내용:</b> 빌라 벽면 및 전주 벽보 제거</div>
+                <div><b>현장사진요약:</b> 빌라 외벽 및 전신주에 부착된 다수의 광고물</div>
+            </div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=한라쉐르빌&goaly=37.7605&goalx=127.0325" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7605&dlng=127.0325&dname=한라쉐르빌&appname=com.nhn.android.nmap" class="btn btn-nmap">네이버</a>
+            </div>
+            <div class="guide">녹양동 빌라 밀집 구역 마지막 점검지입니다.</div>
+        </div>
+
+        <div class="card end">
+            <div class="title"><span class="badge" style="background:#cc4b00">16</span> 의정부시청 (복귀)</div>
+            <div class="info-box" style="background:rgba(255,255,255,0.2); color:white;">
+                주소: 경기도 의정부시 시민로 1
+            </div>
+            <div class="guide" style="color:white;">모든 점검을 마쳤습니다. 서부로를 이용해 시청으로 복귀하세요. 고생하셨습니다!</div>
+        </div>
+
+        <div class="reason" style="text-align:center; color:white; margin-bottom:30px;">
+            경로 선정 이유: 시청 인근 의정부동을 먼저 처리하고, 동측의 고산/민락/용현 지구를 루프로 순회한 뒤, 마지막으로 북측 녹양동을 점검하고 복귀하는 효율적 동선입니다.
+        </div>
+    </div>
+
+</body>
+</html>
