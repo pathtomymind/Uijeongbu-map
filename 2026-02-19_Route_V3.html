@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 최적화 경로 안내</title>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background: linear-gradient(135deg, #667eea, #764ba2); margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; color: #333; }
+        .container { max-width: 800px; width: 100%; }
+        .header { text-align: center; color: white; margin-bottom: 20px; }
+        .header h1 { font-size: 1.5rem; margin-bottom: 5px; }
+        .header p { font-size: 0.8rem; opacity: 0.9; }
+        .summary-box { background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: center; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { background: white; border-radius: 20px; padding: 20px; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); position: relative; }
+        .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
+        .card.end { background: linear-gradient(to right, #f85032, #e73827); color: white; }
+        .badge { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px; color: white; }
+        .badge.start { background-color: #2e7d32; }
+        .badge.mid { background-color: #1976d2; }
+        .badge.end { background-color: #e64a19; }
+        .title { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
+        .info-box { background-color: #f5f5f5; padding: 15px; border-radius: 10px; font-size: 0.9rem; margin-bottom: 15px; color: #444; }
+        .info-item { margin-bottom: 5px; }
+        .guide { font-size: 0.75rem; color: #666; margin-bottom: 15px; line-height: 1.4; }
+        .btn-group { display: flex; gap: 10px; }
+        .btn { flex: 1; padding: 12px; border: none; border-radius: 10px; color: white; font-weight: bold; text-align: center; text-decoration: none; cursor: pointer; font-size: 0.9rem; }
+        .btn-tmap { background: linear-gradient(45deg, #a4508b, #5f0a87); }
+        .btn-naver { background: linear-gradient(45deg, #03cf5d, #009f4b); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+            <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+        </div>
+
+        <div class="summary-box">
+            오늘의 점검 경로 요약: 의정부시청 출발 → 총 34개 지점 → 의정부시청 복귀
+        </div>
+
+        <div class="card start">
+            <div class="title"><span class="badge start">S</span> 출발: 의정부시청</div>
+            <div class="info-box" style="background: none; color: white; padding: 0;">주소: 경기도 의정부시 시민로 1</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">2</span> 경의로 125 (의정부경찰서)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 1</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 경의로 125 (의정부경찰서 방면)</div>
+                <div class="info-item"><b>민원내용:</b> 가로등 현수막 정비 요청</div>
+                <div class="info-item"><b>현장사진요약:</b> 경찰서 앞 가로수 사이 현수막</div>
+            </div>
+            <div class="guide">이동 가이드: 시청 앞 시민로에서 의정부역 방향 이동 후 경의로 진입</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=경의로 125 의정부경찰서&goaly=37.7442&goalx=127.0443" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7442&dlng=127.0443&dname=경의로 125 의정부경찰서&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">34</span> 의정부동 516 (의정부역 서부)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 34</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 의정부동 516 (상가 밀집 지역)</div>
+                <div class="info-item"><b>민원내용:</b> 벽보 및 전단지 집중 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 전신주 및 벽면 부착물 다수</div>
+            </div>
+            <div class="guide">이동 가이드: 마지막 점검지 정비 후 시청 방향으로 직진 복귀</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=의정부동 516&goaly=37.7371&goalx=127.0415" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7371&dlng=127.0415&dname=의정부동 516&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card end">
+            <div class="title"><span class="badge end">E</span> 복귀: 의정부시청</div>
+            <div class="info-box" style="background: none; color: white; padding: 0;">주소: 경기도 의정부시 시민로 1</div>
+        </div>
+
+    </div>
+</body>
+</html>
