@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불법옥외광고물 정비 최적화 경로 안내</title>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        .container { max-width: 800px; width: 100%; }
+        .header { text-align: center; color: white; margin-bottom: 20px; }
+        .header h1 { font-size: 1.5rem; margin-bottom: 5px; }
+        .header p { font-size: 0.8rem; opacity: 0.9; }
+        .summary-box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        .card.start { background: linear-gradient(to right, #11998e, #38ef7d); color: white; }
+        .card.end { background: linear-gradient(to right, #f85032, #e73827); color: white; }
+        .badge {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+        .badge.start { background-color: #2e7d32; }
+        .badge.mid { background-color: #1976d2; }
+        .badge.end { background-color: #e64a19; }
+        .title { font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
+        .info-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .info-item { margin-bottom: 5px; }
+        .guide { font-size: 0.8rem; color: #666; margin-bottom: 15px; line-height: 1.4; }
+        .btn-group { display: flex; gap: 10px; }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn-tmap { background: linear-gradient(45deg, #a4508b, #5f0a87); }
+        .btn-naver { background: linear-gradient(45deg, #03cf5d, #009f4b); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>불법옥외광고물 정비 최적화 경로 안내</h1>
+            <p>이 경로는 구글 인공지능 제미나이가 의정부 지리를 고려하여 동선 낭비 없는 루프형 경로로 설계한 것입니다.</p>
+        </div>
+
+        <div class="summary-box">
+            오늘의 점검 경로 요약: 의정부시청 출발 → 총 11개 지점 → 의정부시청 복귀
+        </div>
+
+        <div class="card start">
+            <div class="title"><span class="badge start">1</span> 출발: 의정부시청</div>
+            <div style="font-size: 0.9rem;">경기도 의정부시 시민로 1</div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">2</span> 경의로 125 (의정부경찰서)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 1</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 경의로 125 (의정부경찰서 방면)</div>
+                <div class="info-item"><b>민원내용:</b> 가로등 현수막 정비 요청</div>
+                <div class="info-item"><b>현장사진요약:</b> 경찰서 앞 가로수 사이 현수막</div>
+            </div>
+            <div class="guide">시청에서 역전교차로 방향으로 이동하여 경의로 진입</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=경의로 125 의정부경찰서&goaly=37.7442985&goalx=127.0443079" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7442985&dlng=127.0443079&dname=경의로 125 의정부경찰서&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">3</span> 가능동 704-5 (가능역)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 7</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 가능동 704-5 (가능역 인근)</div>
+                <div class="info-item"><b>민원내용:</b> 역사 주변 전단지 제거</div>
+                <div class="info-item"><b>현장사진요약:</b> 가능역 1번 출구 앞 가로등</div>
+            </div>
+            <div class="guide">경의로를 따라 북상하여 가능역 방면으로 이동</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=가능동 704-5 가능역&goaly=37.748362&goalx=127.044251" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.748362&dlng=127.044251&dname=가능동 704-5 가능역&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">4</span> 금오동 470-1 (홈플러스 금오점 인근)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 13</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 금오동 470-1</div>
+                <div class="info-item"><b>민원내용:</b> 상가 밀집 지역 에어라이트 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 홈플러스 뒤편 보도 위 에어라이트</div>
+            </div>
+            <div class="guide">호국로를 따라 금오동 행정타운 방향으로 이동</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=금오동 470-1&goaly=37.7516&goalx=127.0694" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7516&dlng=127.0694&dname=금오동 470-1&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">5</span> 신곡동 761-4 (동오마을)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 6</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 신곡동 761-4 (동오마을 공영주차장)</div>
+                <div class="info-item"><b>민원내용:</b> 주차장 펜스 광고물 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 공영주차장 담장 부착물</div>
+            </div>
+            <div class="guide">금오동에서 부용천을 건너 신곡동 동오마을로 진입</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=신곡동 761-4 동오마을&goaly=37.743459&goalx=127.0570679" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.743459&dlng=127.0570679&dname=신곡동 761-4 동오마을&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">6</span> 동일로 156 (오리랑)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 4</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 동일로 156 (오리랑)</div>
+                <div class="info-item"><b>민원내용:</b> 도로변 입간판 점검</div>
+                <div class="info-item"><b>현장사진요약:</b> 장암동 방향 도로변 식당 간판</div>
+            </div>
+            <div class="guide">동일로를 따라 장암역 방향으로 직진 이동</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=동일로 156 오리랑&goaly=37.7268788&goalx=127.047952" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7268788&dlng=127.047952&dname=동일로 156 오리랑&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">7</span> 동일로 149-1 (신한식물원)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 5</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 동일로 149-1 (신한식물원)</div>
+                <div class="info-item"><b>민원내용:</b> 가로수 현수막 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 식물원 입구 가로등 주변</div>
+            </div>
+            <div class="guide">오리랑 인근 동일로 변에 위치</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=동일로 149-1 신한식물원&goaly=37.7095512&goalx=127.046037" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7095512&dlng=127.046037&dname=동일로 149-1 신한식물원&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">8</span> 호원동 454 (회룡역 인근)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 14</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 호원동 454</div>
+                <div class="info-item"><b>민원내용:</b> 인도 위 불법 배너 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 회룡역 앞 상가 보도 배너</div>
+            </div>
+            <div class="guide">장암동에서 호원동 평화로 방향으로 회행</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=호원동 454&goaly=37.7144&goalx=127.0474" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7144&dlng=127.0474&dname=호원동 454&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">9</span> 장곡로 102 (가족지원센터)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 3</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 장곡로 102</div>
+                <div class="info-item"><b>민원내용:</b> 울타리 벽보 제거</div>
+                <div class="info-item"><b>현장사진요약:</b> 지원센터 외곽 펜스</div>
+            </div>
+            <div class="guide">평화로에서 서부로를 거쳐 장곡로로 진입</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=장곡로 102 가족지원센터&goaly=37.7335711&goalx=127.0431529" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7335711&dlng=127.0431529&dname=장곡로 102 가족지원센터&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">10</span> 의정부동 494 (서부교차로)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 2</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 의정부동 494</div>
+                <div class="info-item"><b>민원내용:</b> 서부역 에어라이트 철거</div>
+                <div class="info-item"><b>현장사진요약:</b> 다이소 앞 보도 에어라이트</div>
+            </div>
+            <div class="guide">장곡로에서 의정부역 서부 광장 방향으로 이동</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=의정부동 494 서부교차로&goaly=37.7385851&goalx=127.0436416" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7385851&dlng=127.0436416&dname=의정부동 494 서부교차로&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title"><span class="badge mid">11</span> 의정부동 516 (의정부역 서부)</div>
+            <div class="info-box">
+                <div class="info-item"><b>원래순번:</b> 15</div>
+                <div class="info-item"><b>주소:</b> 경기도 의정부시 의정부동 516</div>
+                <div class="info-item"><b>민원내용:</b> 도로변 전단지 정비</div>
+                <div class="info-item"><b>현장사진요약:</b> 상가 밀집 지역 전신주 부착물</div>
+            </div>
+            <div class="guide">서부교차로 인근 상가 지역 정비</div>
+            <div class="btn-group">
+                <a href="tmap://route?goalname=의정부동 516&goaly=37.7371&goalx=127.0415" class="btn btn-tmap">티맵</a>
+                <a href="nmap://route/car?dlat=37.7371&dlng=127.0415&dname=의정부동 516&appname=com.nhn.android.nmap" class="btn btn-naver">네이버</a>
+            </div>
+        </div>
+
+        <div class="card end">
+            <div class="title"><span class="badge end">12</span> 복귀: 의정부시청</div>
+            <div style="font-size: 0.9rem;">경기도 의정부시 시민로 1</div>
+        </div>
+    </div>
+</body>
+</html>
